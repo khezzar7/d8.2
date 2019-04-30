@@ -1,0 +1,10 @@
+#Nom du module.
+name: Hello
+#Description du module.
+description: Hello module d8.2 for training
+#Type de module
+type: module
+#Core de Drupal pour laquelle le module est développée.
+core: 8.x
+#Version du module
+version: 8x

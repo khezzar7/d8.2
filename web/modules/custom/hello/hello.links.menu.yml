@@ -1,0 +1,9 @@
+hello.page:
+  title: 'Hello!'
+  route_name: 'hello.page'
+  menu_name: main
+
+hello.liste.node:
+  title: 'Liste'
+  route_name: 'hello.liste.node'
+  menu_name: main

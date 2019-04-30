@@ -1,0 +1,17 @@
+hello.page:
+  path: '/hello/{param}'
+  defaults:
+    _title: 'Hello'
+    _controller: '\Drupal\hello\Controller\HelloController::content'
+    param: ' '
+  requirements:
+    _access: 'TRUE'
+
+hello.liste.node:
+  path: '/hello/liste/{nodetype}'
+  defaults:
+    _title: 'Hello_liste'
+    _controller: '\Drupal\hello\Controller\ListeNodeController::content'
+    nodetype: ''
+  requirements:
+    _access: 'TRUE'
