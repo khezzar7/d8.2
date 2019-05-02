@@ -9,3 +9,9 @@ hello.liste.node:
   route_name: hello.liste.node
   base_route: hello.page
   weight: 2
+
+hello.statistic:
+  title: Connection
+  route_name: hello.statistic
+  base_route: entity.user.canonical
+  weight: 3

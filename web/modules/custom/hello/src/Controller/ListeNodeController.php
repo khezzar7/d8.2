@@ -7,7 +7,7 @@ use Drupal\Core\Controller\ControllerBase;
 class ListeNodeController extends ControllerBase {
 
   public function content($nodetype = NULL){
-
+    ksm($this->entityTypeManager()->getDefinitions());
     $storage= $this->entityTypeManager()->getStorage('node');
     $query = $storage->getQuery();
     if($nodetype) {

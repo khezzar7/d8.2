@@ -1,4 +1,5 @@
 <?php
+
 function hello_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match) {
   switch ($route_name) {
 
@@ -9,6 +10,7 @@ function hello_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route
 
   }
 }
+
 function hello_cron() {
 
 \Drupal::messenger()->addMessage(t('Hello cron'));
@@ -16,7 +18,25 @@ function hello_cron() {
 
 
  function hello_user_login(Drupal\user\UserInterface $account) {
- \Drupal::messenger()->addMessage(t('Welcome dear %name!',
+   ksm(\Drupal::database());
+    \Drupal::database()->insert('hello_user_statistics')->fields([
+       'uid'=> $account->id(),
+       'action'=>'1',
+       'time'=>REQUEST_TIME,
+      ])
+      ->execute();
+
+  \Drupal::messenger()->addMessage(t('Welcome dear %name!',
   ['%name'=>$account->getAccountName()]
-));
+  ));
 }
+  function hello_user_logout(\Drupal\Core\Session\AccountInterface $account) {
+    ksm(\Drupal::database());
+    \Drupal::database()->insert('hello_user_statistics')->fields([
+      'uid'=> $account->id(),
+      'action'=>'0',
+      'time'=>REQUEST_TIME,
+    ])
+      ->execute();
+    \Drupal::messenger()->addMessage(t('Sign-Up.'));
+  }

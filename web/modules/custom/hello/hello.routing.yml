@@ -15,3 +15,12 @@ hello.liste.node:
     nodetype: ''
   requirements:
     _access: 'TRUE'
+
+hello.statistic:
+  path: '/user/{user}/statistic'
+  defaults:
+    _title: 'Statistic'
+    _controller: '\Drupal\hello\Controller\Statistic_Controller::content'
+  requirements:
+    _access: 'TRUE'
+
