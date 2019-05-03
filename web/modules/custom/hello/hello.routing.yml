@@ -24,3 +24,18 @@ hello.statistic:
   requirements:
     _access: 'TRUE'
 
+hello.calculator:
+  path: '/calculator'
+  defaults:
+    _title: 'Calculator'
+    _form: '\Drupal\hello\Form\Calculator'
+  requirements:
+    _access: 'TRUE'
+
+hello.config:
+  path: '/admin/config/configuration'
+  defaults:
+    _title: 'Configuration'
+    _form: '\Drupal\hello\Form\Configform'
+  requirements:
+    _access: 'TRUE'

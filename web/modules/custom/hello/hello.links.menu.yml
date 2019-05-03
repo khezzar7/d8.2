@@ -7,3 +7,9 @@ hello.liste.node:
   title: 'Liste'
   route_name: 'hello.liste.node'
   menu_name: main
+
+hello.config:
+  title: 'Hello'
+  route_name: 'hello.config'
+  menu_name: admin
+  parent: 'system.admin_config'
