@@ -1,7 +1,10 @@
 <?php
 namespace Drupal\hello\Plugin\Block;
 
+use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Session\AccountInterface;
+
 /**
  *Provides a session block.
  *
@@ -28,4 +31,10 @@ class session extends BlockBase {
 );
    return $build;
  }
+
+protected function blockAccess(AccountInterface $account) {
+  return AccessResult::allowedIfHasPermission($account,'ma permission');
+
+}
+
 }

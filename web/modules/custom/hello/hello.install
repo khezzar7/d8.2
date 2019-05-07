@@ -51,3 +51,6 @@ function hello_update_8001(){
   $schema->addField('hello_user_statistics','action',$field_spec);
 
 }
+function hello_uninstall() {
+  \Drupal::state()->delete('hello_last_use_calculator');
+}

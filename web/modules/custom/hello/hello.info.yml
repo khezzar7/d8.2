@@ -8,3 +8,4 @@ type: module
 core: 8.x
 #Version du module
 version: 8x
+configure: hello.config

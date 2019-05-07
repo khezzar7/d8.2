@@ -1,0 +1,9 @@
+ma permission:
+  title: 'access hello'
+  description: 'Access hello premiere permission'
+  restrict access: 'true'
+
+admin permission:
+  title: 'administer hello'
+  description: 'acces uniquement pour le role admin'
+  restrict access: 'true'

@@ -23,7 +23,7 @@ class Configform extends ConfigFormBase{
   /**
    * {@inheritedoc}.
    */
-  public function getEditableConfigNames() {
+  protected function getEditableConfigNames() {
 
     \Drupal::configFactory()->getEditable('hello.settings')->save();
     return ['hello.settings'];

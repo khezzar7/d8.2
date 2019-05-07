@@ -80,7 +80,7 @@ class Calculator extends FormBase{
     $value_1 = $form_state -> getValue('value1');
     $value_2 = $form_state -> getValue('value2');
     $operator = $form_state->getValue('operator');
-
+    $operation = $form_state->getValue('operation');
     if($operator == '+'){
 
      $result=$value_1 + $value_2;
@@ -101,6 +101,9 @@ class Calculator extends FormBase{
    $form_state->addRebuildInfo('result',$result);
    $form_state->setRebuild('hello.page');
 
+   //Enregistrement de l'heure de soumission avec state API
+   $state = \Drupal::state();
+    $state->set('hello_last_use_calculator', \Drupal::service('datetime.time')->getCurrentTime());
 
   }
     /**
