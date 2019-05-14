@@ -73,7 +73,7 @@ function hello_form_user_admin_settings_alter(array &$form, FormStateInterface $
   $roles_config= \Drupal::config('hello.settings')->get('role_user_connexion');
 
   $roles= \Drupal::entityTypeManager()->getStorage('user_role')->loadMultiple();
-  ksm($form);
+  //ksm($form);
   unset($roles['anonymous']);
   foreach ($roles as $key=>$role){
     $options[$key] = $role->label();

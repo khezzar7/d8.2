@@ -1,0 +1,5 @@
+services:
+  perf.lazy_builder:
+    class: Drupal\perf\Service\PerfLazyBuilder
+    arguments: ['@current_user']
+
